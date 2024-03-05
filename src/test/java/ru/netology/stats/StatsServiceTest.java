@@ -3,8 +3,6 @@ package ru.netology.stats;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
 
-import java.awt.geom.Arc2D;
-
 public class StatsServiceTest {
 
     @Test
