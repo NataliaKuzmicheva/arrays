@@ -2,8 +2,8 @@ package ru.netology.stats;
 
 public class StatsService {
 
-    public int calculateSum(long[] sales) { //подсчет суммы продаж
-        int sum = 0; //переменная для суммы
+    public long calculateSum(long[] sales) { //подсчет суммы продаж
+        long sum = 0; //переменная для суммы
         for (long sale : sales) {
             sum += sale;
         }
@@ -48,9 +48,9 @@ public class StatsService {
         return maxMonth + 1; // месяца нумеруются с 1, а индексы массива с 0, нужно сдвинуть ответ на 1
     }
 
-    public int calculateCountMonthsUnderAverage(long[] sales) {
-        int countMonth = 0;
-        int averageSales = (int) calculateAverageNumber(sales); //заводим переменную со значением средней суммы продаж
+    public long calculateCountMonthsUnderAverage(long[] sales) {
+        long countMonth = 0;
+        long averageSales = (long) calculateAverageNumber(sales); //заводим переменную со значением средней суммы продаж
         for (int i = 0; i < sales.length; i++) {
             if (sales[i] <= averageSales) {
                 countMonth += 1;
@@ -60,9 +60,9 @@ public class StatsService {
 
     }
 
-    public int calculateCountMonthsOverAverage(long[] sales) {
-        int countMonth = 0;
-        int averageSales = (int) calculateAverageNumber(sales); //заводим переменную со значением средней суммы продаж
+    public long calculateCountMonthsOverAverage(long[] sales) {
+        long countMonth = 0;
+        long averageSales = (long) calculateAverageNumber(sales); //заводим переменную со значением средней суммы продаж
         for (int i = 0; i < sales.length; i++) {
             if (sales[i] >= averageSales) {
                 countMonth += 1;
